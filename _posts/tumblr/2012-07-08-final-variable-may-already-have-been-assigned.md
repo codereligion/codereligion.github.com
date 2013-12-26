@@ -5,7 +5,6 @@ title: Final variable may already have been assigned
 date: '2012-07-08T17:22:00+02:00'
 tags:
 - coding tricks
-tumblr_url: http://codereligion.com/post/26764830419/final-variable-may-already-have-been-assigned
 ---
 You may have encountered this javac compiler error when trying to code something like this
 

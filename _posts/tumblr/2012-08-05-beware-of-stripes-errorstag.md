@@ -1,5 +1,6 @@
 ---
 layout: post
+author: SierraGolf
 title: Beware of Stripes' ErrorsTag
 date: '2012-08-05T14:09:00+02:00'
 tags:
@@ -10,7 +11,6 @@ tags:
 - errorstag
 - error
 - validation
-tumblr_url: http://codereligion.com/post/28761532820/beware-of-stripes-errorstag
 ---
 ## A little background
 

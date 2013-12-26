@@ -11,7 +11,6 @@ tags:
 - generics
 - spring
 - stripes
-tumblr_url: http://codereligion.com/post/28703017143/beware-of-java-beans-introspector
 ---
 ## A Little Background
 

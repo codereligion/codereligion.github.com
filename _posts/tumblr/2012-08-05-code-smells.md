@@ -13,7 +13,6 @@ tags:
 - structure
 - refactoring
 - improvement
-tumblr_url: http://codereligion.com/post/28765684086/code-smells
 ---
 ## What is a *Code Smell*?
 
