@@ -278,7 +278,8 @@ and different representation of data.
 It also comes with thread safety through the provided immutable classes and through a thread safe formatter.
 
 Joda Time is widely accepted as the new standard for handling time. This means though not all frameworks and libraries 
-support Joda Time natively, extensions are available or can be written easily.
+support Joda Time natively, [extensions](http://joda-time.sourceforge.net/related.html) are available or can be 
+written easily.
 
 ### Calendars
 In the Joda API calendars are implemented as *chronologies*. The API comes with the following calendars: 
@@ -427,7 +428,7 @@ and lead of Joda Time and other Joda APIs. Current ETA of that JSR is Java SE 8.
     <tr>
         <td>leap seconds</td>
         <td>no</td>
-        <td><a href="http://www.google.com/url?q=http%3A%2F%2Fjoda-time.sourceforge.net%2Ffaq.html%23leapseconds&sa=D&sntz=1&usg=AFQjCNGL180UF3RaiEnMqIiGweW6lITlzA">no, but extension is possible</a></td>
+        <td><a href="http://joda-time.sourceforge.net/faq.html#leapseconds">no, but extension is possible</a></td>
     </tr>
 </table>
 
