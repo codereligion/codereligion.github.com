@@ -1,0 +1,75 @@
+title:            Code Religion
+description:      We don't just like good code, we worship it.
+logo:             site-logo-inverted.png
+disqus_shortname: 
+search:           true
+url:              
+
+authors:
+  SierraGolf:
+    name: Sebastian Gröbler
+    email: s.groebler@googlemail.com
+    gravatar: a1e441d0a93792c121bfa024fbce9fcb
+  whiskeysierra:
+    name: Willi Schönborn
+    email: w.schoenborn@gmail.com
+    gravatar: 67cbbc19dad0357903c7f74752b9027d
+    
+
+# Owner/author information
+owner:
+  name:           CodeReligion
+  email:          you@email.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         codereligion
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Archive
+    url: /archive
+  - title: About
+    url: /about
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Europe/Berlin
+future:      true
+pygments:    true
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
