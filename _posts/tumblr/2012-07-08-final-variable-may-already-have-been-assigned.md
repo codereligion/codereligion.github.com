@@ -23,10 +23,12 @@ public void work() {
 }
 {% endhighlight %}
 
+What happens now is, that the compiler complains about the second assignment of `content`. If you are a fan of 
+*The Final Story* ([Chapter 2](http://oreilly.com/catalog/hardcorejv/chapter/ch02.pdf) of 
+[Hardcore Java](http://shop.oreilly.com/product/9780596005689.do)) as big as we are, than getting rid of final is not 
+an option.
 
-What happens now is, that the compiler complains about the second assignment of content. If you are a fan of The Final Story (Chapter 2 of Hardcore Java) as big as we are, than getting rid of final is not an option.
-
-Do this instead
+Do this instead:
 
 {% highlight java %}
 private byte[] readContentIfPossible() {

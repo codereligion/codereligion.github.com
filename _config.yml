@@ -45,6 +45,8 @@ links:
     url: /
   - title: Archive
     url: /archive
+  - title: Tag Index
+    url: /tags
   - title: About
     url: /about
 
