@@ -344,9 +344,9 @@ and lead of Joda Time and other Joda APIs. Current ETA of that JSR is Java SE 8.
 <table rules="groups">
     <thead>
         <tr>
-            <td>Aspect</td>
-            <td>JDK</td>
-            <td>Joda Time</td>
+            <th style="text-align: left;">Aspect</th>
+            <th style="text-align: left;">JDK</th>
+            <th style="text-align: left;">Joda Time</th>
         </tr>
     </thead>
     <tr>
