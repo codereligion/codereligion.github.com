@@ -12,9 +12,10 @@ tags:
 - validation
 tumblr_url: http://codereligion.com/post/28761532820/beware-of-stripes-errorstag
 ---
-A little background
+## A little background
 
-Stripes provides a tag called ErrorsTag which could be used like this:
+[Stripes](http://www.stripesframework.org/) provides a tag called 
+[ErrorsTag](http://stripes.sourceforge.net/docs/current/taglib/stripes/errors.html) which could be used like this:
 
 {% highlight xml %}
 <stripes:form action="/foo/first.action">
@@ -51,10 +52,13 @@ It is also possible to define some custom header and footer.
 </stripes:errors>
 {% endhighlight %}
 
-The problem
+## The problem
 
 Some of you may yawn now and say… dooh I know that already. So here is the part where it gets interesting.
-When we were implementing a feature which was rendering a  jsp inside a loop, we were having very strange problems while testing the error messages.
+
+When we were implementing a feature which was rendering a  jsp inside a loop, we were having very strange problems 
+while testing the error messages.
+
 Here is an simplified representation of what we did:
 
 {% highlight xml %}
@@ -68,7 +72,7 @@ Here is an simplified representation of what we did:
 </stripes:form>
 {% endhighlight %}
 
-Inside the item.jsp we were referencing the item and the index variable like this:
+Inside the item.jsp we were referencing the `item` and the `index` variable like this:
 
 {% highlight xml %}
 <stripes:errors field="items[${index}].label""/>
@@ -76,15 +80,22 @@ Inside the item.jsp we were referencing the item and the index variable like thi
 <stripes:text id="item${index}" name="items[${index}].label" value="${item.label}"/>
 {% endhighlight %}
 
-In our case the form does not only render already persistent items, it also allows adding new ones. This is achieved by some fancy jquery logic which will render the content of item.jsp into the dom and fill it with some default data when the user clicks an “add-button”.
+In our case the form does not only render already persistent items, it also allows adding new ones. This is achieved by 
+some fancy jquery logic which will render the content of item.jsp into the dom and fill it with some default data when 
+the user clicks an *add-button*.
+
 Everything about this approach seems normal. We had no problems creating items nor displaying already persistent items.
+
 The trouble started when we were doing manual testing for error message. The test could be described as follows:
 
-open the form with one persistent item
-add a new item (leave required fields empty)
-submit form
-check that error message is displayed for the empty required field
-The error message was displayed in the right place but to our surprise the empty field was not empty anymore. It contained the data from the already persistent item. The rendered html was actually showing that the field showing the error message had the wrong index.
+- open the form with one persistent item
+- add a new item (leave required fields empty)
+- submit form
+- check that error message is displayed for the empty required field
+
+The error message was displayed in the right place but to our surprise the empty field was not empty anymore. It 
+contained the data from the already persistent item. The rendered html was actually showing that the field showing the 
+error message had the wrong index.
 
 So we got a rendered html which looked like this.
 
@@ -109,12 +120,20 @@ Please provide a label.
 <input id="label1" name="items[1].label" value="" class="error" type="text"/>
 {% endhighlight %}
 
-The cause
+## The cause
 
-Our first thought was that this must be some server side mixup when processing the data. Sadly it was not. So we started debugging the jsp rendering and hell was that painful. Infact we were not able to identify how the weird html could be produced.
-We knew that something was changing the index while we were iterating over the items, but the logic was pretty straight forward and had no side effects to the index variable.
-For a few seconds we thought about race conditions, but since jsp rendering is sequential there should not be any concurrency issues.
-Than a lightning struck me and I remembered how a former colleague of mine was cursing about the ErrorsTag of Stripes and that it did something very terrible with the page scope. So I went into the ErrorsTag and found this:
+Our first thought was that this must be some server side mixup when processing the data. Sadly it was not. So we 
+started debugging the jsp rendering and hell was that painful. Infact we were not able to identify how the weird html 
+could be produced.
+
+We knew that something was changing the `index` while we were iterating over the items, but the logic was pretty straight 
+forward and had no side effects to the `index` variable.
+
+For a few seconds we thought about race conditions, but since jsp rendering is sequential there should not be any 
+concurrency issues.
+
+Than a lightning struck me and I remembered how a former colleague of mine was cursing about the `ErrorsTag` of Stripes 
+and that it did something very terrible with the page scope. So I went into the `ErrorsTag` and found this:
 
 {% highlight java %}
     /** Sets the context variables for the current error and index */
@@ -147,13 +166,17 @@ Than a lightning struck me and I remembered how a former colleague of mine was c
     }
 {% endhighlight %}
 
-So what happens here? The Stripes tag actually overrides our helper variable index for their own purposes and does not care to preserve the value afterwards.
+So what happens here? The Stripes tag actually overrides our helper variable `index` for their own purposes and does 
+not care to preserve the value afterwards.
 
-The fix
+## The fix
 
-We fixed it by renaming our variable to something like itemIndex but one could also fix the root problem and talk to the Stripes guys if they could find a way to preserve the index and re-assign it after the ErrorsTag has finished his tasks.
-So far I could not find that this is a known error, but I will spend some more time investigating and maybe open a bug ticket in their jira.
+We fixed it by renaming our variable to something like `itemIndex` but one could also fix the root problem and talk to 
+the Stripes guys if they could find a way to preserve the index and re-assign it after the `ErrorsTag` has finished his 
+tasks. So far I could not find that this is a known error, but I will spend some more time investigating and maybe open 
+a bug ticket in their jira.
 
-Conclusion
+## Conclusion
 
-Until this thing is fixed consider index and error Stripes reserved words and do not use them as page scoped variables when working with ErrorsTag in your jsps.
+Until this thing is fixed consider `index` and `error` Stripes reserved words and do not use them as page scoped 
+variables when working with `ErrorsTag` in your jsps.

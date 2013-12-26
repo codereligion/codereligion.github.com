@@ -7,13 +7,31 @@ url:
 
 authors:
   SierraGolf:
-    name: Sebastian Gröbler
-    email: s.groebler@googlemail.com
-    gravatar: a1e441d0a93792c121bfa024fbce9fcb
+    name:           Sebastian Gröbler
+    gravatar:       a1e441d0a93792c121bfa024fbce9fcb
+    twitter:        whiskeysierra84
+    facebook:       
+    github:         codereligion
+    stackexchange:  whiskeysierra
+    linkedin:       
+    instagram:      
+    flickr:         
+    tumblr:         
+    # For Google Authorship https://plus.google.com/authorship
+    google_plus:   
   whiskeysierra:
-    name: Willi Schönborn
-    email: w.schoenborn@gmail.com
-    gravatar: 67cbbc19dad0357903c7f74752b9027d
+    name:           Willi Schönborn
+    gravatar:       67cbbc19dad0357903c7f74752b9027d
+    twitter:        whiskeysierra84
+    facebook:       
+    github:         codereligion
+    stackexchange:  whiskeysierra
+    linkedin:       
+    instagram:      
+    flickr:         
+    tumblr:         
+    # For Google Authorship https://plus.google.com/authorship
+    google_plus:    https://plus.google.com/u/107833663349010011387
     
 
 # Owner/author information
