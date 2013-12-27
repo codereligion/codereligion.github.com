@@ -4,9 +4,7 @@ author: SierraGolf
 title: Code Smells
 date: '2012-08-05T16:32:00+02:00'
 tags:
-- code smells
-- code
-- smell
+- code smell
 - best practices
 - effective
 - clean
