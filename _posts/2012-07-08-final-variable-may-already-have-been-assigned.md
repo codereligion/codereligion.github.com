@@ -5,6 +5,7 @@ title: Final variable may already have been assigned
 date: '2012-07-08T17:22:00+02:00'
 tags:
 - coding tricks
+comments: true
 ---
 You may have encountered this javac compiler error when trying to code something like this
 

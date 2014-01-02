@@ -7,6 +7,7 @@ tags:
 - stripes
 - error handling
 - conversion
+comments: true
 ---
 ## A little background
 

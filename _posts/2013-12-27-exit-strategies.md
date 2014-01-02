@@ -15,6 +15,7 @@ image:
     feature: feature/exit.jpg
     credit: Jesse Millan
     creditlink: http://www.flickr.com/photos/stopdown/404899232/
+comments: true
 ---
 
 You may have learnt it in a programming course, read it in a book or heard it from someone who uses it like a mantra:
@@ -107,8 +108,8 @@ talking about local variables. Compare the last two examples, the first one uses
 second doesn't require one.
 
 #### Additional control structures and higher indentation
-Enforcing a single exit point usually requires additional control structures, usually `if`-statements which introduce
-new complexity and increase the indentation of the code, thus reducing readability.
+Enforcing a single exit point almost always requires additional control structures, usually `if`-statements which 
+introduce new complexity and increase the indentation of the code, thus reducing readability.
 
 #### Resource management in modern languages
 Modern languages, like Java, have a garbage collector, which highly reduces the risk of memory leaks and frees the
@@ -176,8 +177,6 @@ return as soon as possible: e.g. find element in array
 ### Disadvantages
 
 #### Allegedly harder to debug
-
-#### Can often be replaced by a ternary expression
 
 #### Often indicates too complicated methods
 which need to be broken into smaller units anyway

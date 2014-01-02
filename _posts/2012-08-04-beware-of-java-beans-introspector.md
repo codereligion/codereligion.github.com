@@ -11,6 +11,7 @@ tags:
 - generics
 - spring
 - stripes
+comments: true
 ---
 ## A Little Background
 
