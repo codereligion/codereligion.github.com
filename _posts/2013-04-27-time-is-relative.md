@@ -343,96 +343,6 @@ and lead of Joda Time and other Joda APIs. Current ETA of that JSR is Java SE 8.
 
 ## Overview
 
-<table rules="groups">
-    <thead>
-        <tr>
-            <th style="text-align: left;">Aspect</th>
-            <th style="text-align: left;">JDK</th>
-            <th style="text-align: left;">Joda Time</th>
-        </tr>
-    </thead>
-    <tr>
-        <td>convenience</td>
-        <td>got better with Calendar</td>
-        <td>very good</td>
-    </tr>
-    <tr>
-        <td>performance</td>
-        <td>needs external synchronization in multithreaded environments</td>
-        <td>performs better than Date, Calendar and TimeZone in most use cases, specifically in multithreaded environments</td>
-    </tr>
-    <tr>
-        <td>precision</td>
-        <td>
-            <ul>
-                <li>seconds with Date</li>
-                <li>milliseconds with Calendar</li>
-            </ul>
-        </td>
-        <td>milliseconds</td>
-    </tr>
-    <tr>
-        <td>immutability</td>
-        <td>Date and Calendar are mutable</td>
-        <td>provides immutable and mutable classes</td>
-    </tr>
-    <tr>
-        <td>calendar</td>
-        <td>
-            <ul>
-                <li>no support for Date</li>
-                <li>hard coded support for Gregorian, Japanese Imperial and Buddhist with Calendar</li>
-            </ul>
-        </td>
-        <td>all major calendars, easily extendable</td>
-    </tr>
-    <tr>
-        <td>internationalization</td>
-        <td>
-            <ul>
-                <li>no support with Date</li>
-                <li>possible with Calendar</li>
-            </ul>
-        </td>
-        <td>good support</td>
-    </tr>
-    <tr>
-        <td>thread safety</td>
-        <td>no, needs external synchronization</td>
-        <td>through immutable classes and thread safe formatter</td>
-    </tr>
-    <tr>
-        <td>parameter validation</td>
-        <td>no, silently rolls to the next best value or a default value</td>
-        <td>yes</td>
-    </tr>
-    <tr>
-        <td>time zone</td>
-        <td>
-            <ul>
-                <li>possible with Date, but very difficult to handle</li>
-                <li>got a lot better with Calendar</li>
-            </ul>
-        </td>
-        <td>good support and provides data structures without time zones</td>
-    </tr>
-    <tr>
-        <td>daylight saving</td>
-        <td>very difficult, since it does not stick to the time zone database specification</td>
-        <td>asserts on invalid dates and sticks as close as possible to the time zone database specification (switches back to standard time in the specified hour)</td>
-    </tr>
-    <tr>
-        <td>leap years</td>
-        <td>yes</td>
-        <td>yes</td>
-    </tr>
-    <tr>
-        <td>leap seconds</td>
-        <td>no</td>
-        <td><a href="http://joda-time.sourceforge.net/faq.html#leapseconds">no, but extension is possible</a></td>
-    </tr>
-</table>
-
 <table class="table">
     <thead>
         <tr>
@@ -443,52 +353,52 @@ and lead of Joda Time and other Joda APIs. Current ETA of that JSR is Java SE 8.
     </thead>
     <tbody>
         <tr>
-            <th>Convenience</th>
+            <td>Convenience</td>
             <td class="neutral" title="got better with Calendar">✘</td>
             <td class="positive">✔</td>
         </tr>
         <tr>
-            <th>Precision</th>
+            <td>Precision</td>
             <td class="positive" title="seconds with Date, milliseconds with Calendar">✔</td>
             <td class="positive" title="milliseconds">✔</td>
         </tr>
         <tr>
-            <th>Immutability</th>
+            <td>Immutability</td>
             <td class="negative" title="Date and Calendar are mutable">✘</td>
             <td class="positive" title="provides immutable and mutable classes">✔</td>
         </tr>
         <tr>
-            <th>Calendar</th>
+            <td>Calendar</td>
             <td class="neutral" title="hard coded support for Gregorian, Japanese Imperial and Buddhist">✘</td>
             <td class="positive" title="all major calendars, easily extendable">✔</td>
         </tr>
         <tr>
-            <th>Internationalization</th>
+            <td>Internationalization</td>
             <td class="negative" title="possible with Calendar">✘</td>
             <td class="positive" title="good support">✔</td>
         </tr>
         <tr>
-            <th>Parameter validation</th>
+            <td>Parameter validation</td>
             <td class="negative" title="none, silently rolls to the next best or a default value">✘</td>
             <td class="positive">✔</td>
         </tr>
         <tr>
-            <th>Time Zone</th>
+            <td>Time Zone</td>
             <td class="neutral" title="got a lot better with Calendar">✘</td>
             <td class="positive" title="good support and provides data structures without time zones">✔</td>
         </tr>
         <tr>
-            <th>Daylight saving</th>
+            <td>Daylight saving</td>
             <td class="neutral" title="very difficult, since it does not stick to the time zone database specification">✘</td>
             <td class="positive" title="asserts on invalid dates and sticks as close as possible to the time zone database specification (switches back to standard time in the specified hour)">✔</td>
         </tr>
         <tr>
-            <th>Leap years</th>
+            <td>Leap years</td>
             <td class="positive">✔</td>
             <td class="positive">✔</td>
         </tr>
         <tr>
-            <th>Leap seconds</th>
+            <td>Leap seconds</td>
             <td class="negative">✘</td>
             <td class="neutral" title="no, but extension is possible">✔</td>
         </tr>
