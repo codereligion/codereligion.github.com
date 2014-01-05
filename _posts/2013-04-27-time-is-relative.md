@@ -433,4 +433,66 @@ and lead of Joda Time and other Joda APIs. Current ETA of that JSR is Java SE 8.
     </tr>
 </table>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>JDK</th>
+            <th>Joda Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Convenience</th>
+            <td class="neutral" title="got better with Calendar">✘</td>
+            <td class="positive">✔</td>
+        </tr>
+        <tr>
+            <th>Precision</th>
+            <td class="positive" title="seconds with Date, milliseconds with Calendar">✔</td>
+            <td class="positive" title="milliseconds">✔</td>
+        </tr>
+        <tr>
+            <th>Immutability</th>
+            <td class="negative" title="Date and Calendar are mutable">✘</td>
+            <td class="positive" title="provides immutable and mutable classes">✔</td>
+        </tr>
+        <tr>
+            <th>Calendar</th>
+            <td class="neutral" title="hard coded support for Gregorian, Japanese Imperial and Buddhist">✘</td>
+            <td class="positive" title="all major calendars, easily extendable">✔</td>
+        </tr>
+        <tr>
+            <th>Internationalization</th>
+            <td class="negative" title="possible with Calendar">✘</td>
+            <td class="positive" title="good support">✔</td>
+        </tr>
+        <tr>
+            <th>Parameter validation</th>
+            <td class="negative" title="none, silently rolls to the next best or a default value">✘</td>
+            <td class="positive">✔</td>
+        </tr>
+        <tr>
+            <th>Time Zone</th>
+            <td class="neutral" title="got a lot better with Calendar">✘</td>
+            <td class="positive" title="good support and provides data structures without time zones">✔</td>
+        </tr>
+        <tr>
+            <th>Daylight saving</th>
+            <td class="neutral" title="very difficult, since it does not stick to the time zone database specification">✘</td>
+            <td class="positive" title="asserts on invalid dates and sticks as close as possible to the time zone database specification (switches back to standard time in the specified hour)">✔</td>
+        </tr>
+        <tr>
+            <th>Leap years</th>
+            <td class="positive">✔</td>
+            <td class="positive">✔</td>
+        </tr>
+        <tr>
+            <th>Leap seconds</th>
+            <td class="negative">✘</td>
+            <td class="neutral" title="no, but extension is possible">✔</td>
+        </tr>
+    </tbody>
+</table>
+
 *[JSR]: Java Specification Request
