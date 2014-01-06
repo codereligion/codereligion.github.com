@@ -2,7 +2,6 @@
 layout: post
 author: whiskeysierra
 title: Exit strategies
-date: '2013-12-27T16:00:00+01:00'
 tags:
 - java
 - exit point

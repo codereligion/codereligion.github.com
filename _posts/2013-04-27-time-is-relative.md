@@ -355,7 +355,7 @@ and lead of Joda Time and other Joda APIs. Current ETA of that JSR is Java SE 8.
         <tr>
             <td>Convenience</td>
             <td class="neutral" title="got better with Calendar">✘</td>
-            <td class="positive">✔</td>
+            <td class="positive" title="easy to use">✔</td>
         </tr>
         <tr>
             <td>Precision</td>
@@ -374,7 +374,7 @@ and lead of Joda Time and other Joda APIs. Current ETA of that JSR is Java SE 8.
         </tr>
         <tr>
             <td>Internationalization</td>
-            <td class="negative" title="possible with Calendar">✘</td>
+            <td class="neutral" title="possible with Calendar">✔</td>
             <td class="positive" title="good support">✔</td>
         </tr>
         <tr>
@@ -384,7 +384,7 @@ and lead of Joda Time and other Joda APIs. Current ETA of that JSR is Java SE 8.
         </tr>
         <tr>
             <td>Time Zone</td>
-            <td class="neutral" title="got a lot better with Calendar">✘</td>
+            <td class="neutral" title="got a lot better with Calendar">✔</td>
             <td class="positive" title="good support and provides data structures without time zones">✔</td>
         </tr>
         <tr>
