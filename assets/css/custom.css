@@ -1,0 +1,30 @@
+
+table {
+    width: 100%;
+}
+
+table tr th, table tr td {
+    padding: 8px;
+}
+
+table td.positive {
+    color: #468847;
+    background-color: #dff0d8 !important;
+}
+
+table td.neutral {
+    color: #8a6d3b;
+    background-color: #fcf8e3 !important;
+}
+
+table td.negative {
+    color: #a94442;
+    background-color: #f2dede !important;
+}
+
+table td.positive span,
+table td.neutral span,
+table td.negative span {
+    border-bottom: 1px #000 dotted;
+    cursor: pointer;
+}

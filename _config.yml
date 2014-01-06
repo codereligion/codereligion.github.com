@@ -1,60 +1,60 @@
 title:            Code Religion
 description:      We don't just like good code, we worship it.
 logo:             site-logo-inverted.png
-disqus_shortname: 
+disqus_shortname: codereligion
 search:           true
-url:              
+url:
 
 authors:
   SierraGolf:
     name:           Sebastian Gröbler
     gravatar:       a1e441d0a93792c121bfa024fbce9fcb
-    twitter:        whiskeysierra84
-    facebook:       
-    github:         codereligion
-    stackexchange:  whiskeysierra
-    linkedin:       
-    instagram:      
-    flickr:         
-    tumblr:         
+    twitter:
+    facebook:
+    github:         SierraGolf
+    stackexchange:
+    linkedin:
+    instagram:
+    flickr:
+    tumblr:
     # For Google Authorship https://plus.google.com/authorship
-    google_plus:   
+    google_plus:
   whiskeysierra:
     name:           Willi Schönborn
     gravatar:       67cbbc19dad0357903c7f74752b9027d
     twitter:        whiskeysierra84
-    facebook:       
-    github:         codereligion
+    facebook:
+    github:         whiskeysierra
     stackexchange:  whiskeysierra
-    linkedin:       
-    instagram:      
-    flickr:         
-    tumblr:         
+    linkedin:
+    instagram:
+    flickr:
+    tumblr:
     # For Google Authorship https://plus.google.com/authorship
     google_plus:    https://plus.google.com/u/107833663349010011387
-    
+
 
 # Owner/author information
 owner:
   name:           CodeReligion
-  email:          you@email.com
+  email:
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
+  twitter:
+  facebook:
   github:         codereligion
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
+  stackexchange:
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    
+  google_plus:
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
+google_analytics:
+google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:
 
 # Links to include in top navigation
 # For external links add external: true
@@ -85,7 +85,7 @@ kramdown:
   use_coderay: false
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10

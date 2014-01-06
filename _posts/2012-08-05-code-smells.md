@@ -11,6 +11,7 @@ tags:
 - structure
 - refactoring
 - improvement
+comments: true
 ---
 ## What is a *Code Smell*?
 
